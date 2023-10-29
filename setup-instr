@@ -1,0 +1,33 @@
+install tumbleweed, completely new partition, with sway defaults
+
+copy sway config to home dir (git)
+
+install vim, git, zsh, rofi, bat, man, docker
+
+enable docker service and add rushil to docker group
+
+install ohmyzsh (via wget)
+
+install ohmyzsh extensions, via git (zsh-autosuggestions, zsh-syntax-highlighting, fzf, zsh-vi-mode)
+
+THINKPAD (add setterm --blength=0 to .profile)
+
+install brave (add rpm repo via their website)
+
+sudo hostnamectl set-hostname POKEMON
+
+install NetworkManager-tui
+
+
+
+TODO:
+
+change background
+install pdfviewer?
+
+maybe vscode? idk
+maybe pdfviewer / obsidian
+
+
+add git ssh keys
+script this
