@@ -72,10 +72,13 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  fzf
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-vi-mode
+  fzf
 )
+
+export FZF_BASE=/bin/fzf
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,16 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval $(thefuck --alias)
 
-#FZF setup
-export FZF_DEFAULT_COMMAND="fd . $HOME"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias cpf="xclip -sel c <"
 
-[ -f "/home/rushil/.ghcup/env" ] && source "/home/rushil/.ghcup/env" # ghcup-env
-
-export PATH="/opt/flutter/bin:$PATH"
-
-alias swapalt=/usr/bin/setxkbmap -option "altwin:swap_laltlwin" 
-alias swapcaps=/usr/bin/setxkbmap -option "ctrl:swapcaps"
+alias beepoff="setterm --blength=0"
+alias nocaps="/usr/bin/setxkbmap -option ctrl:nocaps"
