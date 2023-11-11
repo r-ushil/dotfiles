@@ -2,7 +2,7 @@ install tumbleweed, completely new partition, with sway defaults
 
 copy sway config to home dir (git)
 
-install vim, git, zsh, rofi, bat, man, docker
+install vim, git, zsh, rofi, bat, man, docker, docker-compose
 
 enable docker service and add rushil to docker group
 
