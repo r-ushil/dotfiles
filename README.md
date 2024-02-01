@@ -1,3 +1,3 @@
 # dotfiles
 
-My dotfiles while I'm playing around with Arch.
+My dotfiles while I'm playing around with openSUSE.

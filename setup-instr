@@ -30,4 +30,4 @@ maybe pdfviewer / obsidian
 
 
 add git ssh keys
-script this
+script this - ansible -> autoYAST (kickstart equiv.)
