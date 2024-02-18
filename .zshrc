@@ -111,6 +111,14 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+function chpwd() {
+	emulate -L zsh
+	ls -a
+}
 
+
+
+alias rc="vi ~/.zshrc && source ~/.zshrc"
 alias beepoff="setterm --blength=0"
 alias nocaps="/usr/bin/setxkbmap -option ctrl:nocaps"
+alias obsidian="flatpak run md.obsidian.Obsidian &"
