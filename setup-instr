@@ -31,3 +31,8 @@ maybe pdfviewer / obsidian
 
 add git ssh keys
 script this - ansible -> autoYAST (kickstart equiv.)
+
+
+
+run this in home dir
+ln -s /path/to/dotfiles/.zshrc .zshrc

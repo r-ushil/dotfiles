@@ -117,7 +117,7 @@ function chpwd() {
 }
 
 
-
+alias cpf="cat $1 | wl-copy"
 alias rc="vi ~/.zshrc && source ~/.zshrc"
 alias beepoff="setterm --blength=0"
 alias nocaps="/usr/bin/setxkbmap -option ctrl:nocaps"
