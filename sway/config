@@ -17,7 +17,7 @@ set $term alacritty --config-file /etc/alacritty/alacritty.toml
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu 'rofi -modi run, drun, window  -show drun' 
+set $menu 'wofi --show drun --allow-images -D key_expand=Tab' 
 # it is set in config.d/50-openSUSE.conf
 
 ### Output configuration
@@ -89,13 +89,7 @@ input "type:keyboard" {
 
     # Exit sway (logs you out of your Wayland session)
     # Exit menu
-    bindsym $mod+Shift+e exec swaynag -f "Terminus" \
-    -m "Exit sway? This will end your current Wayland session." \
-    -B "Exit now" "swaymsg exit" \
-    -B "Suspend" "systemctl suspend && pkill swaynag" \
-    -B "Reboot" "systemctl reboot" \
-    -B "Power off" "systemctl poweroff" \
-
+    bindsym $mod+Shift+e exec ~/.config/sway/exit-menu.sh 
 
 # Moving around:
 #

@@ -17,12 +17,13 @@ configuration {
     drac-pur: #bd93f9;
     drac-red: #ff5555;
     drac-yel: #f1fa8c;
+    my-cyan: #35b9ab;
 
     font: "Jetbrains Mono 12";
 
     foreground: @drac-fgd;
-    background-color: @drac-bgd;
-    active-background: @drac-pnk;
+    background-color: #101010;
+    active-background: #404040;
     urgent-background: @drac-red;
     urgent-foreground: @drac-bgd;
     
@@ -30,7 +31,7 @@ configuration {
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
-    bordercolor: #6272a4;
+    bordercolor: @my-cyan;
 }
 
 #window {
@@ -138,7 +139,7 @@ configuration {
     expand:     false;
     str:        ">";
     margin:     0px 0.3em 0em 0em ;
-    text-color: @drac-pur;
+    text-color: @my-cyan;
 }
 element-text, element-icon {
     background-color: inherit;
