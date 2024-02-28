@@ -116,6 +116,7 @@ function chpwd() {
 	ls -a
 }
 
+export GOPATH=$HOME/go
 
 alias cpf="cat $1 | wl-copy"
 alias rc="vi ~/.zshrc && source ~/.zshrc"
