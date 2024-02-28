@@ -7,3 +7,10 @@ fix screen sharing
 	need to update the dbus activation env with WAYLAND_DISPLAY
 
 	xdg-desktop-portal-wlr is inactive (systemctl status) - find out why
+
+
+
+fix the alt-shift-e (lock menu) - swaynag is fucking ugly
+
+
+ansible this shit

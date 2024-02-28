@@ -88,8 +88,15 @@ input "type:keyboard" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-#
+    # Exit menu
+    bindsym $mod+Shift+e exec swaynag -f "Terminus" \
+    -m "Exit sway? This will end your current Wayland session." \
+    -B "Exit now" "swaymsg exit" \
+    -B "Suspend" "systemctl suspend && pkill swaynag" \
+    -B "Reboot" "systemctl reboot" \
+    -B "Power off" "systemctl poweroff" \
+
+
 # Moving around:
 #
     # Move your focus around
@@ -215,5 +222,8 @@ exec waybar
 exec dbus-update-activation-environment --systemd SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
 
 
-include /etc/sway/config.d/*.conf
-include ~/.config/sway/config.d/*
+# Default borders to none
+# Set a thin black border and disable title bars
+default_border pixel 1
+default_floating_border pixel 1
+
