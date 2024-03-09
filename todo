@@ -1,16 +1,1 @@
-fix screen sharing
-
-	looks like i need to set XDG_CURRENT_DESKTOP=sway
-
-	need to import-env to systemctl with above and XDG_SESSION_TYPE
-
-	need to update the dbus activation env with WAYLAND_DISPLAY
-
-	xdg-desktop-portal-wlr is inactive (systemctl status) - find out why
-
-
-
-fix the alt-shift-e (lock menu) - swaynag is fucking ugly
-
-
 ansible this shit

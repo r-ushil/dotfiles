@@ -91,6 +91,15 @@ input "type:keyboard" {
     # Exit menu
     bindsym $mod+Shift+e exec ~/.config/sway/exit-menu.sh 
 
+
+    bindsym XF86MonBrightnessUp exec brightnessctl -d "intel_backlight" set +8%
+    bindsym XF86MonBrightnessDown exec brightnessctl -d "intel_backlight" set 8%-
+
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+
 # Moving around:
 #
     # Move your focus around
@@ -213,8 +222,7 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 # it is set in config.d/50-openSUSE.conf
 exec waybar
-exec dbus-update-activation-environment --systemd SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway XDG_SESSION_TYPE
-
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway
 
 # Default borders to none
 # Set a thin black border and disable title bars

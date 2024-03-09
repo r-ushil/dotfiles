@@ -18,7 +18,7 @@ sudo hostnamectl set-hostname POKEMON
 
 install NetworkManager-tui
 
-
+install pipewire wireplumber and xdg-desktop-portal-wlr
 
 TODO:
 
