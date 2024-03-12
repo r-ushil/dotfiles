@@ -9,7 +9,7 @@ selected=$(echo -e $options | wofi --show dmenu --width 300 --height 300 --lines
 # Execute the selected option
 case $selected in
     "suspend")
-        swaylock -c 050505 && systemctl suspend
+        systemctl suspend && swaylock -c 050505 
         ;;
     "lock")
         swaylock -c 050505
